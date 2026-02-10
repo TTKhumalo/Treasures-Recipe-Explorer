@@ -1,0 +1,23 @@
+<!-- src/app/book-chef/book-chef.component.html -->
+<div class="page-container">
+  <div class="page-header">
+    <a routerLink="/" class="back-btn">← Back</a>
+    <h1>👨‍🍳 Book a Professional Chef</h1>
+    <p>Hire experienced chefs for your special events and private cooking sessions</p>
+  </div>
+
+  <div class="chefs-grid">
+    <div class="chef-card" *ngFor="let chef of chefs">
+      <div class="chef-image">{{ chef.image }}</div>
+      <div class="chef-info">
+        <h3>{{ chef.name }}</h3>
+        <p class="specialty">{{ chef.specialty }}</p>
+        <div class="chef-meta">
+          <span class="meta">📅 {{ chef.experience }}</span>
+          <span class="meta">💰 {{ chef.price }}</span>
+        </div>
+        <button class="book-btn" (click)="bookChef(chef)">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>

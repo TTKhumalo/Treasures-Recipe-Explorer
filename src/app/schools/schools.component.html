@@ -1,0 +1,37 @@
+<!-- src/app/schools/schools.component.html -->
+<div class="page-container">
+  <div class="page-header">
+    <a routerLink="/" class="back-btn">← Back</a>
+    <h1>🏫 Best Cooking Schools & Institutes</h1>
+    <p>Find the perfect culinary school to develop your cooking skills</p>
+  </div>
+
+  <div class="schools-grid">
+    <div class="school-card" *ngFor="let school of schools">
+      <div class="school-image">{{ school.image }}</div>
+      <div class="school-content">
+        <h3>{{ school.name }}</h3>
+        <p class="location">📍 {{ school.location }}</p>
+        
+        <div class="school-details">
+          <div class="detail-item">
+            <span class="label">Rating:</span>
+            <span class="value">⭐ {{ school.rating }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Specialization:</span>
+            <span class="value">{{ school.courses }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Enrollment:</span>
+            <span class="value enrollment" [ngClass]="'enrollment-' + school.enrollment.toLowerCase().replace(' ', '-')">{{ school.enrollment }}</span>
+          </div>
+        </div>
+
+        <p class="description">{{ school.description }}</p>
+        
+        <button class="enroll-btn" (click)="enrollSchool(school)">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>

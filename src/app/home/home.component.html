@@ -7,7 +7,7 @@
     
     <div class="cta-buttons">
       <a routerLink="/recipes" class="btn btn-primary">Explore Recipes</a>
-      <a href="#resources" class="btn btn-secondary">Learn More</a>
+      <a href="#services" class="btn btn-secondary">Our Services</a>
     </div>
   </div>
 </div>
@@ -33,11 +33,26 @@
   </div>
 </div>
 
-<div class="resources-section" id="resources">
-  <h2>Learning Resources</h2>
-  <div class="pill-group">
-    <a class="pill" *ngFor="let item of links" [href]="item.link" target="_blank" rel="noopener">
-      {{ item.title }}
-    </a>
+<div class="services-section" id="services">
+  <h2>Our Premium Services</h2>
+  <div class="services-grid">
+    <div class="service-card" (click)="navigateTo('/book-chef')">
+      <div class="service-icon">👨‍🍳</div>
+      <h3>Book a Chef</h3>
+      <p>Hire professional chefs for your special events and private cooking sessions</p>
+      <button class="service-btn">Get Started →</button>
+    </div>
+    <div class="service-card" (click)="navigateTo('/tutor')">
+      <div class="service-icon">👨‍🏫</div>
+      <h3>Become a Tutor</h3>
+      <p>Join our team as a professional cooking instructor and share your expertise</p>
+      <button class="service-btn">Apply Now →</button>
+    </div>
+    <div class="service-card" (click)="navigateTo('/schools')">
+      <div class="service-icon">🏫</div>
+      <h3>Cooking Schools</h3>
+      <p>Discover the best culinary institutes and training programs worldwide</p>
+      <button class="service-btn">Explore Schools →</button>
+    </div>
   </div>
 </div>
