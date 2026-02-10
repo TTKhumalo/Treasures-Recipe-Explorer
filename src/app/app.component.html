@@ -1,7 +1,13 @@
 <!-- src/app/app.component.html -->
 <nav>
-  <a routerLink="/">Home</a> |
-  <a routerLink="/recipes">Recipes</a>
+  <a routerLink="/" class="nav-brand">🍴 Treasures Recipe</a>
+  <a routerLink="/recipes">Explore Recipes</a>
 </nav>
 
-<router-outlet></router-outlet>
+<main style="flex: 1;">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <p>&copy; 2026 Treasures Recipe Explorer. Made with ❤️ for food lovers.</p>
+</footer>

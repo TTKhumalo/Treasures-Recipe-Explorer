@@ -1,3 +1,60 @@
 <!-- src/app/recipe-detail/recipe-detail.component.html -->
-<h2>Recipe Detail</h2>
-<p>Showing details for recipe ID: {{ recipeId }}</p>
+<div class="recipe-detail-container">
+  <div class="recipe-detail-header">
+    <button class="back-btn" routerLink="/recipes">← Back to Recipes</button>
+  </div>
+  
+  <div class="detail-content">
+    <div class="detail-image">
+      <div class="placeholder-image">🍽️</div>
+    </div>
+    
+    <div class="detail-info">
+      <h2>Recipe Details</h2>
+      <p class="recipe-id">Recipe ID: {{ recipeId }}</p>
+      
+      <div class="info-card">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 cups flour</li>
+          <li>1 egg</li>
+          <li>Salt and pepper to taste</li>
+          <li>Fresh herbs</li>
+        </ul>
+      </div>
+      
+      <div class="info-card">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Prepare all ingredients</li>
+          <li>Mix dry ingredients</li>
+          <li>Combine with wet ingredients</li>
+          <li>Cook until golden brown</li>
+          <li>Serve and enjoy!</li>
+        </ol>
+      </div>
+      
+      <div class="nutrition-info">
+        <h3>Nutrition Facts</h3>
+        <div class="nutrition-grid">
+          <div class="nutrition-item">
+            <span class="nutrition-value">250</span>
+            <span class="nutrition-label">Calories</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="nutrition-value">12g</span>
+            <span class="nutrition-label">Protein</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="nutrition-value">8g</span>
+            <span class="nutrition-label">Fat</span>
+          </div>
+          <div class="nutrition-item">
+            <span class="nutrition-value">30g</span>
+            <span class="nutrition-label">Carbs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

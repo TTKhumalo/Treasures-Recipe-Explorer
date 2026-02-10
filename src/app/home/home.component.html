@@ -1,10 +1,43 @@
 <!-- src/app/home/home.component.html -->
-<h1>{{ title }}</h1>
-<p>Welcome to the Treasures Recipe Explorer! Explore a variety of delicious recipes and find your next favorite meal.</p>
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>{{ title }}</h1>
+    <p class="hero-subtitle">Discover culinary treasures and cook like a pro</p>
+    <p class="hero-description">Welcome to the Treasures Recipe Explorer! Explore a variety of delicious recipes and find your next favorite meal.</p>
+    
+    <div class="cta-buttons">
+      <a routerLink="/recipes" class="btn btn-primary">Explore Recipes</a>
+      <a href="#resources" class="btn btn-secondary">Learn More</a>
+    </div>
+  </div>
+</div>
 
+<div class="features-section">
+  <h2>Why Choose Us?</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🍳</div>
+      <h3>Easy Recipes</h3>
+      <p>Simple step-by-step instructions for all skill levels</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⏱️</div>
+      <h3>Quick & Easy</h3>
+      <p>Find recipes that fit your schedule</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌟</div>
+      <h3>Delicious Flavors</h3>
+      <p>Authentic recipes from around the world</p>
+    </div>
+  </div>
+</div>
 
-<div class="pill-group">
-  <a class="pill" *ngFor="let item of links" [href]="item.link" target="_blank" rel="noopener">
-    {{ item.title }}
-  </a>
+<div class="resources-section" id="resources">
+  <h2>Learning Resources</h2>
+  <div class="pill-group">
+    <a class="pill" *ngFor="let item of links" [href]="item.link" target="_blank" rel="noopener">
+      {{ item.title }}
+    </a>
+  </div>
 </div>
