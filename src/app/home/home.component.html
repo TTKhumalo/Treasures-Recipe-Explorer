@@ -1,0 +1,16 @@
+<main class="main">
+  <h1>{{ title() }}</h1>
+  <p>Welcome to the Treasures Recipe Explorer app!</p>
+
+  <div class="pill-group">
+    <a
+      class="pill"
+      *ngFor="let item of links"
+      [href]="item.link"
+      target="_blank"
+      rel="noopener"
+    >
+      {{ item.title }}
+    </a>
+  </div>
+</main>

@@ -1,0 +1,24 @@
+.main {
+  text-align: center;
+  padding: 2rem;
+}
+
+.pill-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pill {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.pill:hover {
+  background-color: #115293;
+}
